@@ -48,6 +48,7 @@ const StyledButtonIcon = styled(ButtonIcon)`
   background-size: 35%;
   border: solid 1px #251e20;
   z-index: 9;
+  font-size: 12px;
 `;
 
 const GridTemplate = ({ children, pageType }) => {

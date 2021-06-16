@@ -5,6 +5,7 @@ import auto from 'assets/img/Auto.jpg';
 import home from 'assets/icons/home.svg';
 import Button from 'components/atoms/Button/Button';
 import Kontakt from 'components/molecules/Kontakt';
+import { useNavigate } from 'react-router';
 
 const StyledWrapper = styled.nav`
   position: fixed;
@@ -22,6 +23,9 @@ const StyledLogoButton = styled(Button)`
   width: 120px;
   height: 30px;
   color: #ffe900;
+  :active {
+    background-color: white;
+  }
   /* background-image: url(${home});
   background-repeat: no-repeat;
   background-position: center;
@@ -70,13 +74,14 @@ const LiStyled = styled.li`
 `;
 
 const Sidebar = ({ pageType }) => {
+  const navigate = useNavigate();
   return (
     <StyledWrapper activeColor={pageType}>
       <StyledDivLogo></StyledDivLogo>
       <StyledDiv>
         <UlStyled>
           <LiStyled>
-            <StyledLogoButton onClick={() => {}}> HOME </StyledLogoButton>
+            <StyledLogoButton onClick={() => navigate('/')}> HOME </StyledLogoButton>
           </LiStyled>
           <LiStyled>
             <Button onClick={() => {}} activeColor={pageType}>
@@ -94,9 +99,7 @@ const Sidebar = ({ pageType }) => {
             </Button>
           </LiStyled>
           <LiStyled>
-            <Button onClick={() => {}} activeColor={pageType}>
-              OM OS
-            </Button>
+            <Button onClick={() => navigate('/omos')}>OM OS</Button>
           </LiStyled>
         </UlStyled>
 

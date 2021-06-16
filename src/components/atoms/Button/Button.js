@@ -21,5 +21,8 @@ const Button = styled.button`
       height: 30px;
       font-size: 10px;
     `}
+  :active {
+    background-color: white;
+  }
 `;
 export default Button;

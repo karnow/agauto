@@ -21,6 +21,16 @@ body {
     font-size: 1.6rem; //happy rems
     font-family: 'Montserrat', sans-serif;
 }
+.slider{
+    width: 800px;
+    height: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 2px;
+    border: 2px solid black;
+}
+
+
 `;
 
 export default GlobalStyle;

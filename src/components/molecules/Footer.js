@@ -22,6 +22,8 @@ const StyledP = styled.p`
 `;
 const StyledHr = styled.hr`
   background-color: #ffe900;
+  margin-left: auto;
+  margin-right: auto;
   width: 400px;
   height: 3px;
   border-radius: 1px;

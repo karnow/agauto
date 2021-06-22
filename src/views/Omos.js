@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import GridTemplate from 'templates/GridTemplate';
 import WarAuto from '../assets/img/ba11.png';
@@ -16,6 +16,7 @@ const StyledWrapper2 = styled.div`
   background-blend-mode: multiply, multiply;
   position: relative;
   margin-top: 120px;
+  padding-bottom: 30px;
   background-size: cover;
   z-index: 1;
 `;
@@ -26,6 +27,12 @@ const StyledSection = styled.div`
   width: 930px;
 `;
 const StyledSection2 = styled.div`
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 930px;
+`;
+const StyledKontaktSection = styled.div`
   padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -129,6 +136,33 @@ const Omos = () => {
             </StedForDiv>
           </StyleAjerDiv>
         </StyledSection2>
+        <StyledKontaktSection>
+          <StyledH2>KONTAKT</StyledH2>
+          <Paragraph2>
+            Har du spørgsmål eller andet, så er du meget velkommen til at kontakte os Vi vil
+            kontakte dig hurtigst muligt Drejer det sig om bil til salg/skrot , venligst send alt
+            info om bilen Drejer det sig om transport af gods eller bil kontakt venligst Arne Hansen
+            på <a href='mailto:arne@ahshipping.dk'>mail</a>
+          </Paragraph2>
+          <Paragraph2>
+            Prøvestensbroen 5 2300 København S Tlf: +45 40 62 36 60 Mobil: +45 21 93 07 77 Fax: +45
+            36 30 84 85 E-mail: info@ag-auto.dk Åbningstider Mandag til fredag: 10:00 til 19:00
+            Lørdag: 12:00 til 16:00 Søndag: Lukket
+          </Paragraph2>
+          <div style={{ paddingLeft: '150px' }}>
+            <iframe
+              className='mapa'
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.0489287983246!2d12.625644916043925!3d55.67074930578469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653acceca17fa7d%3A0x2ff9581c083a5de1!2sPr%C3%B8vestensbroen%205%2C%202300%20K%C3%B8benhavn!5e0!3m2!1spl!2sdk!4v1624352536728!5m2!1spl!2sdk'
+              width='600'
+              height='450'
+              frameBorder='1'
+              style={{ border: 0 }}
+              allowFullScreen=''
+              aria-hidden='false'
+              tabIndex='0'
+            />
+          </div>
+        </StyledKontaktSection>
       </StyledWrapper2>
     </GridTemplate>
   );

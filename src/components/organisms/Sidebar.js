@@ -84,7 +84,7 @@ const Sidebar = ({ pageType }) => {
             <StyledLogoButton onClick={() => navigate('/')}> HOME </StyledLogoButton>
           </LiStyled>
           <LiStyled>
-            <Button onClick={() => {}} activeColor={pageType}>
+            <Button onClick={() => navigate('/reservedele')} activeColor={pageType}>
               RESERVEDELE
             </Button>
           </LiStyled>
@@ -96,6 +96,11 @@ const Sidebar = ({ pageType }) => {
           <LiStyled>
             <Button onClick={() => {}} activeColor={pageType}>
               BILKØB
+            </Button>
+          </LiStyled>
+          <LiStyled>
+            <Button onClick={() => {}} activeColor={pageType}>
+              EKSPORT
             </Button>
           </LiStyled>
           <LiStyled>

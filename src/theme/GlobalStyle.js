@@ -11,11 +11,7 @@ html {
     font-size: 62,5%; //1 rem === 10px
 }
 body {
-    /* background-image: url(${WarAuto});
-   background-repeat: no-repeat;
-    background-size: cover; */
-    /* margin-top: 700px; */
-    /* background-position:center; */
+   background-color: yellow;
   margin:0 0;
    
     font-size: 1.6rem; //happy rems
@@ -29,7 +25,12 @@ body {
     border-radius: 2px;
     border: 2px solid black;
 }
-
+.mapa{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 `;
 

@@ -89,17 +89,17 @@ const Sidebar = ({ pageType }) => {
             </Button>
           </LiStyled>
           <LiStyled>
-            <Button onClick={() => {}} activeColor={pageType}>
+            <Button onClick={() => navigate('/bilsalg')} activeColor={pageType}>
               BILSALG
             </Button>
           </LiStyled>
           <LiStyled>
-            <Button onClick={() => {}} activeColor={pageType}>
+            <Button onClick={() => navigate('/bilkob')} activeColor={pageType}>
               BILKØB
             </Button>
           </LiStyled>
           <LiStyled>
-            <Button onClick={() => {}} activeColor={pageType}>
+            <Button onClick={() => navigate('/eksport')} activeColor={pageType}>
               EKSPORT
             </Button>
           </LiStyled>

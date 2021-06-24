@@ -14,29 +14,28 @@ const StyledWrapper2 = styled.div`
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%),
     radial-gradient(at top center, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
   background-blend-mode: multiply, multiply;
-  position: relative;
+  /* position: relative; */
   margin-top: 120px;
   padding-bottom: 30px;
-  background-size: cover;
+  padding-left: 20%;
+  padding-right: 20%;
+  /* background-size: cover; */
   z-index: 1;
 `;
 const StyledSection = styled.div`
   padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  width: 930px;
 `;
 const StyledSection2 = styled.div`
   padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  width: 930px;
 `;
 const StyledKontaktSection = styled.div`
   padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  width: 930px;
 `;
 const StyledH2 = styled.h3`
   font-style: italic;
@@ -52,7 +51,7 @@ const StyledHr = styled.hr`
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  width: 890px;
+  width: 80%;
   height: 3px;
   border-radius: 1px;
 `;
@@ -111,6 +110,7 @@ const Omos = () => {
               <div
                 style={{
                   backgroundImage: `url(${boss})`,
+                  backgroundRepeat: 'no-repeat',
                   height: '300px',
                 }}
               ></div>
@@ -124,6 +124,7 @@ const Omos = () => {
               <div
                 style={{
                   backgroundImage: `url(${boss})`,
+                  backgroundRepeat: 'no-repeat',
                   height: '300px',
                 }}
               ></div>
@@ -149,12 +150,12 @@ const Omos = () => {
             36 30 84 85 E-mail: info@ag-auto.dk Åbningstider Mandag til fredag: 10:00 til 19:00
             Lørdag: 12:00 til 16:00 Søndag: Lukket
           </Paragraph2>
-          <div style={{ paddingLeft: '150px' }}>
+          <div style={{ paddingLeft: '10%', paddingRight: '10%', height: '500px' }}>
             <iframe
               className='mapa'
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.0489287983246!2d12.625644916043925!3d55.67074930578469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653acceca17fa7d%3A0x2ff9581c083a5de1!2sPr%C3%B8vestensbroen%205%2C%202300%20K%C3%B8benhavn!5e0!3m2!1spl!2sdk!4v1624352536728!5m2!1spl!2sdk'
-              width='600'
-              height='450'
+              width='80%'
+              height='100%'
               frameBorder='1'
               style={{ border: 0 }}
               allowFullScreen=''

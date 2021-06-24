@@ -4,6 +4,9 @@ import MainTemplate from 'templates/MainTemplate';
 import Home from 'views/Home';
 import Omos from 'views/Omos';
 import Reservedele from 'views/Reservedele';
+import Bilsalg from 'views/Bilsalg';
+import Bilkob from 'views/Bilkob';
+import Eksport from 'views/Eksport';
 
 function Root() {
   return (
@@ -13,6 +16,9 @@ function Root() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/reservedele' element={<Reservedele />} />
+            <Route path='/bilsalg' element={<Bilsalg />} />
+            <Route path='/bilkob' element={<Bilkob />} />
+            <Route path='/eksport' element={<Eksport />} />
             <Route path='/omos' element={<Omos />} />
           </Routes>
         </MainTemplate>

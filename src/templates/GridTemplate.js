@@ -10,7 +10,7 @@ import NewItemBar from 'components/organisms/NewItemBar';
 import Footer from 'components/molecules/Footer';
 
 const StyledGrid = styled.div`
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 85px;
   @media (max-width: 1500px) {
@@ -19,7 +19,7 @@ const StyledGrid = styled.div`
   }
   @media (max-width: 1100px) {
     grid-template-columns: 1fr;
-  }
+  } */
 `;
 
 const StyledPageHeader = styled.div`

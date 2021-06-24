@@ -11,7 +11,7 @@ html {
     font-size: 62,5%; //1 rem === 10px
 }
 body {
-   background-color: yellow;
+  
   margin:0 0;
    
     font-size: 1.6rem; //happy rems
@@ -31,6 +31,17 @@ body {
     margin-right: auto;
     margin-left: auto;
 }
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+
 
 `;
 

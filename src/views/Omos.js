@@ -1,25 +1,23 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import GridTemplate from 'templates/GridTemplate';
-import WarAuto from '../assets/img/ba11.png';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
-import AwesomeSlider from 'react-awesome-slider';
-import AwsSliderStyles from 'react-awesome-slider/src/styles.js';
-import zdj1 from '../assets/img/war.jpg';
-import zdj2 from '../assets/img/war2.jpg';
-import zdj3 from '../assets/img/war3.jpg';
 import boss from 'assets/img/boss.svg';
+import Slider from 'components/molecules/Slider';
+import { StyledImage } from 'components/molecules/Kontakt';
+import telefon from '../assets/icons/phone.svg';
+import mobil from '../assets/icons/mobil.svg';
+import email from '../assets/icons/email.svg';
+import fax from '../assets/icons/fax.svg';
 
 const StyledWrapper2 = styled.div`
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%),
     radial-gradient(at top center, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
   background-blend-mode: multiply, multiply;
-  /* position: relative; */
   margin-top: 120px;
   padding-bottom: 30px;
   padding-left: 20%;
   padding-right: 20%;
-  /* background-size: cover; */
   z-index: 1;
 `;
 const StyledSection = styled.div`
@@ -69,18 +67,30 @@ const EjerDiv = styled.div`
 const StedForDiv = styled.div`
   width: 20%;
 `;
+const StylesParagraph = styled.p`
+  font-size: 28px;
+  margin: 0 0;
+  font-style: oblique;
+  font-weight: bold;
+`;
+const StyledSpan = styled.div`
+  margin-left: 0px;
+  padding: 30px 0 30px;
+`;
 const Omos = () => {
   return (
     <GridTemplate>
       <StyledWrapper2>
         <StyledSection>
           <StyledH2>HVEM ER VI?</StyledH2>
-          <Paragraph style={{ textAlign: 'justify' }}>
+          <Paragraph2>
             Vi er en familieejet ophugger virksomhed med stor fokus på miljø og kvalitet. Dertil er
-            god service og rådgivning vigtige værdier for os. I AG-AUTO ApS er vi altid åbne for nye
-            udfordrende opgaver. Hold dig derfor ikke tilbage! Kontakt os og vi undersøger hvad vi
-            kan gøre for dig.
-          </Paragraph>
+            god service og rådgivning vigtige værdier for os.
+          </Paragraph2>
+          <Paragraph2 style={{ marginBottom: '30px' }}>
+            I AG-AUTO ApS er vi altid åbne for nye udfordrende opgaver. Hold dig derfor ikke
+            tilbage! Kontakt os og vi undersøger hvad vi kan gøre for dig.
+          </Paragraph2>
           <Slider />
         </StyledSection>
         <StyledSection2>
@@ -91,16 +101,23 @@ const Omos = () => {
             Vi har ca.2.500 m2 areal, og planlægger at udvide indenfor det nærmeste år. AG-AUTO ApS
             har kvalificeret ansatte, som sørger for en hurtig, nem og miljørigtig behandling af
             bilerne. Vi lever op til myndighedernes miljøkrav, og blev i 2004 ISO 14001
-            certificeret. For AG-AUTO ApS er det af central betydning, at sikre høj kvalitet og
-            service uanset opgaven eller ønske. Vort værdigrundlag er forudsætningen for at skabe et
-            godt forhold til vores kunder og samarbejdspartner. Vores indsats for at servicere
-            kunderne bygger på samarbejde, personligt ansvar og professionalitet. Vi handler
-            hurtigt, men vi går ikke på kompromis med kvaliteten. Vi kommunikerer åbent og med
-            respekt. I AG-AUTO ApS beskæftiger vi os primært med ophug af reservedele fra danske
+            certificeret.
+          </Paragraph2>
+          <Paragraph2>
+            For AG-AUTO ApS er det af central betydning, at sikre høj kvalitet og service uanset
+            opgaven eller ønske. Vort værdigrundlag er forudsætningen for at skabe et godt forhold
+            til vores kunder og samarbejdspartner. Vores indsats for at servicere kunderne bygger på
+            samarbejde, personligt ansvar og professionalitet. Vi handler hurtigt, men vi går ikke
+            på kompromis med kvaliteten. Vi kommunikerer åbent og med respekt.
+          </Paragraph2>
+          <Paragraph2>
+            I AG-AUTO ApS beskæftiger vi os primært med ophug af reservedele fra danske
             personbiler/varevogne, køb og salg af biler/varevogne samt transport af gods/biler.
             Størstedelen af vores salg ligger i Danmark, men vi har også en del eksport til
             udlandet, fortrinsvis Afrika. Hos AG-AUTO ApS hjælper vi dig med rådgivning og alt
             papirarbejde uanset om du ønsker at skrotte en bil eller transportere bil/gods/stykgods.
+          </Paragraph2>
+          <Paragraph2>
             Vi har også dygtige mekaniker, som kan hjælpe dig med at reparere din bil! Kom forbi med
             bilen, så laver vi en diagnose og giver dig et uforpligtende tilbud.
           </Paragraph2>
@@ -138,18 +155,40 @@ const Omos = () => {
           </StyleAjerDiv>
         </StyledSection2>
         <StyledKontaktSection>
-          <StyledH2>KONTAKT</StyledH2>
-          <Paragraph2>
+          <StylesParagraph style={{ textAlign: 'center', marginBottom: '20px' }}>
+            KONTAKT
+          </StylesParagraph>
+          <StylesParagraph>
             Har du spørgsmål eller andet, så er du meget velkommen til at kontakte os Vi vil
             kontakte dig hurtigst muligt Drejer det sig om bil til salg/skrot , venligst send alt
             info om bilen Drejer det sig om transport af gods eller bil kontakt venligst Arne Hansen
             på <a href='mailto:arne@ahshipping.dk'>mail</a>
-          </Paragraph2>
-          <Paragraph2>
-            Prøvestensbroen 5 2300 København S Tlf: +45 40 62 36 60 Mobil: +45 21 93 07 77 Fax: +45
-            36 30 84 85 E-mail: info@ag-auto.dk Åbningstider Mandag til fredag: 10:00 til 19:00
-            Lørdag: 12:00 til 16:00 Søndag: Lukket
-          </Paragraph2>
+          </StylesParagraph>
+          <div style={{ margin: '25px 0px', textAlign: 'center' }}>
+            <StylesParagraph>Adresse: Prøvestensbroen 5 2300 København S </StylesParagraph>
+            <StyledSpan>
+              <StylesParagraph>
+                <StyledImage secondary src={telefon} />
+                +45 40623660
+              </StylesParagraph>
+              <StylesParagraph>
+                <StyledImage secondary src={mobil} />
+                +45 21930777
+              </StylesParagraph>
+              <StylesParagraph>
+                <StyledImage secondary src={fax} />
+                +45 36308485
+              </StylesParagraph>
+              <StylesParagraph>
+                <StyledImage secondary src={email} />
+                info@ag-auto.dk
+              </StylesParagraph>
+            </StyledSpan>
+            <StylesParagraph>Åbningstider:</StylesParagraph>
+            <StylesParagraph>Mandag til fredag: 10:00 til 19:00</StylesParagraph>
+            <StylesParagraph> Lørdag: 12:00 til 16:00</StylesParagraph>
+            <StylesParagraph> Søndag: Lukket </StylesParagraph>
+          </div>
           <div style={{ paddingLeft: '10%', paddingRight: '10%', height: '500px' }}>
             <iframe
               className='mapa'
@@ -170,13 +209,3 @@ const Omos = () => {
 };
 
 export default Omos;
-
-function Slider() {
-  return (
-    <AwesomeSlider className='slider' cssModule={AwsSliderStyles}>
-      <div data-src={zdj1} />
-      <div data-src={zdj2} />
-      <div data-src={zdj3} />
-    </AwesomeSlider>
-  );
-}

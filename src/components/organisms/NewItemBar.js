@@ -1,13 +1,9 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Input from 'components/atoms/Input/Input';
 import Button from 'components/atoms/Button/Button';
 import Heading from 'components/atoms/Heading/Heading';
-import { useDispatch } from 'react-redux';
-import { addResource } from 'actions';
-import AxiosApiNote from 'api/axiosApi';
 
 const StyledWrapper = styled.div`
   border-left: 5px solid ${({ theme, activeColor }) => theme[activeColor]};
@@ -38,8 +34,6 @@ const StyledForm = styled(Form)`
   flex-direction: column;
 `;
 const NewItemBar = ({ pageType, isVisible, handleNewItemBarToggle }) => {
-  const userId = localStorage.getItem('userId');
-  const dispatch = useDispatch();
   return (
     <StyledWrapper isVisible={isVisible} activeColor={pageType}>
       <Heading>Kontaktinformation</Heading>
@@ -52,12 +46,6 @@ const NewItemBar = ({ pageType, isVisible, handleNewItemBarToggle }) => {
             type,
           };
           console.log(data);
-          AxiosApiNote.addNote(data, userId)
-            .then((result) => {
-              console.log(result);
-              dispatch(addResource(result));
-            })
-            .catch((err) => console.log(err));
           handleNewItemBarToggle();
           setSubmitting(false);
         }}

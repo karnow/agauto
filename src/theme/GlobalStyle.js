@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import WarAuto from '../assets/img/ba11.png';
-
 const GlobalStyle = createGlobalStyle`
+
+
 
 *, *::before , *::after {
     box-sizing: border-box;

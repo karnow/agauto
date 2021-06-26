@@ -9,7 +9,6 @@ const StyledWrapper = styled.div`
   background-image: url(${WarAuto});
   background-repeat: no-repeat;
   background-size: cover;
-
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 10%;

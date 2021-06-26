@@ -9,16 +9,25 @@ const StylesParagraph = styled.p`
   font-style: oblique;
   font-weight: bold;
 `;
+
 const StyledImage = styled.img`
   width: 16px;
   height: 16px;
   margin-right: 10px;
+  ${({ secondary }) =>
+    secondary &&
+    css`
+      width: 105px;
+      height: 30px;
+      font-size: 10px;
+    `}
 `;
+export { StyledImage };
+
 const StyledSpan = styled.span`
   margin-left: 80px;
   padding: 30px 0 30px;
 `;
-
 function Kontakt() {
   return (
     <StyledSpan>

@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import auto from 'assets/img/Auto.jpg';
-import home from 'assets/icons/home.svg';
 import Button from 'components/atoms/Button/Button';
 import Kontakt from 'components/molecules/Kontakt';
 import { useNavigate } from 'react-router';
@@ -26,11 +24,6 @@ const StyledLogoButton = styled(Button)`
   :active {
     background-color: white;
   }
-  /* background-image: url(${home});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 25px 25px;
-  background-clip: border-box; */
 `;
 
 const StyledDivLogo = styled.div`
@@ -112,10 +105,6 @@ const Sidebar = ({ pageType }) => {
       </StyledDiv>
     </StyledWrapper>
   );
-};
-
-Sidebar.propTypes = {
-  pageType: PropTypes.string.isRequired,
 };
 
 export default Sidebar;

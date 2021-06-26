@@ -1,18 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { Provider } from 'react-redux';
+import '../node_modules/react-image-gallery/styles/css/image-gallery.css';
 import Root from 'views/Root';
-import { noteReducer } from './reducers';
-
-const store = createStore(noteReducer, composeWithDevTools());
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <Root />
-    </Provider>
+    <Root />
   </React.StrictMode>,
   document.getElementById('root')
 );

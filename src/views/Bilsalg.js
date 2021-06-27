@@ -1,4 +1,5 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
 import styled from 'styled-components';
 import GridTemplate from 'templates/GridTemplate';
 import WarAuto from '../assets/img/ba11.png';
@@ -58,6 +59,18 @@ const StyledTd = styled.td`
 `;
 
 const Bilsalg = () => {
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('gmail', 'template_901n5jt', e.target, 'user_3hqjH4SM9prI82AjbjUwe').then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  }
   return (
     <GridTemplate pageType='note'>
       <StyledWrapper>
@@ -92,7 +105,18 @@ const Bilsalg = () => {
           </StyledTable>
         </div>
       </StyledWrapper>
-      {/* <StyledWrapper2></StyledWrapper2> */}
+      <StyledWrapper2>
+        <form className='contact-form' onSubmit={sendEmail}>
+          <input type='hidden' name='contact_number' />
+          <label>Name</label>
+          <input type='text' name='user_name' />
+          <label>Email</label>
+          <input type='email' name='user_email' />
+          <label>Message</label>
+          <textarea name='message' />
+          <input type='submit' value='Send' />
+        </form>
+      </StyledWrapper2>
     </GridTemplate>
   );
 };

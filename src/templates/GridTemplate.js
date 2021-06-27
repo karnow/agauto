@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 import UserPageTemplate from 'templates/UserPageTemplate';
 import Input from 'components/atoms/Input/Input';
 import Heading from 'components/atoms/Heading/Heading';
@@ -47,7 +48,7 @@ const StyledButtonIcon = styled(ButtonIcon)`
   border-radius: 30px;
   background-size: 35%;
   border: solid 1px #251e20;
-  z-index: 9;
+  z-index: 11;
   font-size: 12px;
 `;
 
@@ -59,8 +60,8 @@ const GridTemplate = ({ children, pageType }) => {
 
   return (
     <UserPageTemplate pageType={pageType}>
+      <NotificationContainer />
       {children}
-
       <StyledButtonIcon onClick={() => handleNewItemBarToggle()} icon={''} pageType={pageType}>
         KONTAKT
       </StyledButtonIcon>
@@ -69,7 +70,6 @@ const GridTemplate = ({ children, pageType }) => {
         pageType={pageType}
         isVisible={state}
       />
-
       <Footer />
     </UserPageTemplate>
   );

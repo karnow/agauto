@@ -1,13 +1,16 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import emailjs from 'emailjs-com';
 import styled from 'styled-components';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 import Input from 'components/atoms/Input/Input';
 import Button from 'components/atoms/Button/Button';
 import Heading from 'components/atoms/Heading/Heading';
 
 const StyledWrapper = styled.div`
   border-left: 5px solid ${({ theme, activeColor }) => theme[activeColor]};
-  z-index: 8;
+  z-index: 9;
   position: fixed;
   display: flex;
   padding: 100px 90px;
@@ -27,69 +30,84 @@ const StyledTextArea = styled(Input)`
   height: 30vh;
 `;
 const StyledInput = styled(Input)`
-  margin-top: 30px;
+  margin-top: 10px;
 `;
 const StyledForm = styled(Form)`
   display: flex;
   flex-direction: column;
 `;
 const NewItemBar = ({ pageType, isVisible, handleNewItemBarToggle }) => {
+  const sendDataToEmailApi = (values) => {
+    const { navn, emailtelefon, message } = values;
+    // console.log(navn, emailtelefon, message);
+
+    emailjs
+      .send(
+        'gmail',
+        'template_901n5jt',
+        { navn: `${navn}`, emailtelefon: `${emailtelefon}`, message: `${message}` },
+        'user_3hqjH4SM9prI82AjbjUwe'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          NotificationManager.success('Message was sent');
+        },
+        (error) => {
+          console.log(error.text);
+          NotificationManager.error('Message was not sent');
+          return false;
+        }
+      );
+
+    return true;
+  };
+
+  const handleSubmit = (values, { setSubmitting, resetForm }) => {
+    const emailWasSent = sendDataToEmailApi(values);
+    if (emailWasSent) {
+      resetForm();
+      handleNewItemBarToggle();
+      setSubmitting(false);
+    }
+
+    // alert(JSON.stringify(values, null, 2));
+    // console.log(values);
+  };
+
   return (
     <StyledWrapper isVisible={isVisible} activeColor={pageType}>
       <Heading>Kontaktinformation</Heading>
-      <Formik
-        initialValues={{ title: '', content: '', articleUrl: '', twitterName: '', created: '' }}
-        onSubmit={(values, { setSubmitting }) => {
-          const type = `${pageType}s`;
-          const data = {
-            ...values,
-            type,
-          };
-          console.log(data);
-          handleNewItemBarToggle();
-          setSubmitting(false);
-        }}
-      >
-        {({ values, handleChange, handleBlur }) => (
+      <Formik initialValues={{ navn: '', emailtelefon: '', message: '' }} onSubmit={handleSubmit}>
+        {({ values, handleChange, handleBlur, isSubmitting }) => (
           <StyledForm>
             <StyledInput
               type='text'
-              name='title'
-              placeholder='title'
+              name='navn'
+              placeholder='navn'
               onChange={handleChange}
               onBlur={handleBlur}
-              value={values.title}
+              value={values.navn}
             />
-            {pageType === 'twitter' && (
-              <StyledInput
-                type='text'
-                name='twitterName'
-                placeholder='twitter name'
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.twitterName}
-              />
-            )}
-            {pageType === 'article' && (
-              <StyledInput
-                placeholder='link'
-                type='text'
-                name='articleUrl'
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.articleUrl}
-              />
-            )}
+
+            <StyledInput
+              type='text'
+              name='emailtelefon'
+              placeholder='email/telefon'
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.emailtelefon}
+            />
 
             <StyledTextArea
-              name='content'
+              name='message'
               as='textarea'
-              placeholder='description'
+              placeholder='message'
               onChange={handleChange}
               onBlur={handleBlur}
-              value={values.content}
+              value={values.message}
             />
-            <Button activeColor={pageType} type='submit'>
+            <Button disabled={isSubmitting} type='submit'>
               Send ind
             </Button>
           </StyledForm>

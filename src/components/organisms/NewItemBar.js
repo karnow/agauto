@@ -2,6 +2,7 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import emailjs from 'emailjs-com';
 import styled from 'styled-components';
+import * as Yup from 'yup';
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 import Input from 'components/atoms/Input/Input';
@@ -25,7 +26,7 @@ const StyledWrapper = styled.div`
   transition: transform 0.5s ease-in-out;
 `;
 const StyledTextArea = styled(Input)`
-  margin: 30px 0 100px;
+  margin: 30px 0 2px 0px;
   border-radius: 20px;
   height: 30vh;
 `;
@@ -74,12 +75,21 @@ const NewItemBar = ({ pageType, isVisible, handleNewItemBarToggle }) => {
     // alert(JSON.stringify(values, null, 2));
     // console.log(values);
   };
+  const validationSchema = Yup.object({
+    navn: Yup.string().required('Required'),
+    emailtelefon: Yup.string().email('Invalid Email Address').required('Required'),
+    message: Yup.string().required('Required'),
+  });
 
   return (
     <StyledWrapper isVisible={isVisible} activeColor={pageType}>
       <Heading>Kontaktinformation</Heading>
-      <Formik initialValues={{ navn: '', emailtelefon: '', message: '' }} onSubmit={handleSubmit}>
-        {({ values, handleChange, handleBlur, isSubmitting }) => (
+      <Formik
+        initialValues={{ navn: '', emailtelefon: '', message: '' }}
+        onSubmit={handleSubmit}
+        validationSchema={validationSchema}
+      >
+        {({ errors, values, handleChange, handleBlur, isSubmitting }) => (
           <StyledForm>
             <StyledInput
               type='text'
@@ -89,7 +99,9 @@ const NewItemBar = ({ pageType, isVisible, handleNewItemBarToggle }) => {
               onBlur={handleBlur}
               value={values.navn}
             />
-
+            {errors.navn ? (
+              <p style={{ color: 'red', margin: '0', fontSize: '12px' }}>{errors.navn}</p>
+            ) : null}
             <StyledInput
               type='text'
               name='emailtelefon'
@@ -98,7 +110,9 @@ const NewItemBar = ({ pageType, isVisible, handleNewItemBarToggle }) => {
               onBlur={handleBlur}
               value={values.emailtelefon}
             />
-
+            {errors.emailtelefon ? (
+              <p style={{ color: 'red', margin: '0', fontSize: '12px' }}>{errors.emailtelefon}</p>
+            ) : null}
             <StyledTextArea
               name='message'
               as='textarea'
@@ -107,7 +121,10 @@ const NewItemBar = ({ pageType, isVisible, handleNewItemBarToggle }) => {
               onBlur={handleBlur}
               value={values.message}
             />
-            <Button disabled={isSubmitting} type='submit'>
+            {errors.message ? (
+              <p style={{ color: 'red', margin: '0', fontSize: '12px' }}>{errors.message}</p>
+            ) : null}
+            <Button style={{ marginTop: '10px' }} disabled={isSubmitting} type='submit'>
               Send ind
             </Button>
           </StyledForm>

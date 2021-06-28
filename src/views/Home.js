@@ -21,16 +21,7 @@ const StyledWrapper = styled.div`
 
   z-index: 1;
 `;
-const StyledWrapper2 = styled.div`
-  position: relative;
-  background-color: grey;
-  background-size: cover;
-  height: 900px;
-  padding-top: 20px;
-  padding-left: 20%;
-  padding-right: 20%;
-  z-index: 1;
-`;
+
 const StyledSection = styled.div`
   padding-top: 50px;
   margin-left: auto;

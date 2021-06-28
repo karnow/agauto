@@ -59,7 +59,6 @@ const StyleAjerDiv = styled.div`
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
-  /* border: 2px solid black; */
 `;
 const EjerDiv = styled.div`
   width: 20%;

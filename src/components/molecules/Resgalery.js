@@ -5,7 +5,7 @@ import res3 from '../../assets/img/res3.jpg';
 import res4 from '../../assets/img/res4.jpg';
 import res5 from '../../assets/img/res5.jpg';
 import res6 from '../../assets/img/res6.jpg';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const StyledContainer = styled.div`
   display: flex;

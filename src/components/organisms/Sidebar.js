@@ -110,7 +110,7 @@ const Sidebar = ({ pageType }) => {
     setState(!state);
   };
   const navigate = useNavigate();
-  console.log(state);
+
   return (
     <StyledWrapper activeColor={pageType}>
       <StyledDivLogo></StyledDivLogo>

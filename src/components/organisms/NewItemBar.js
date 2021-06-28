@@ -1,9 +1,9 @@
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form } from 'formik';
 import emailjs from 'emailjs-com';
 import styled from 'styled-components';
 import * as Yup from 'yup';
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+import { NotificationManager } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 import Input from 'components/atoms/Input/Input';
 import Button from 'components/atoms/Button/Button';
@@ -135,6 +135,3 @@ const NewItemBar = ({ pageType, isVisible, handleNewItemBarToggle }) => {
 };
 
 export default NewItemBar;
-
-{
-}

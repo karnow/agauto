@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import GridTemplate from 'templates/GridTemplate';
-import WarAuto from '../assets/img/ba11.png';
 import spare from '../assets/img/spare1.jpg';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Resgalery from 'components/molecules/Resgalery';
@@ -17,14 +16,7 @@ const StyledWrapper = styled.div`
 
   z-index: 1;
 `;
-const StyledWrapper2 = styled.div`
-  position: relative;
-  background-color: grey;
-  background-size: cover;
-  height: 900px;
-  padding-top: 20px;
-  z-index: 1;
-`;
+
 const StyledH2 = styled.h3`
   color: white;
   text-align: center;

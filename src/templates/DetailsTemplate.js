@@ -1,7 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import UserPageTemplate from 'templates/UserPageTemplate';
 import Heading from 'components/atoms/Heading/Heading';
@@ -75,22 +73,5 @@ const DetailsTemplate = ({ pageType, title, created, content, twitterName, artic
     </UserPageTemplate>
   );
 };
-
-// DetailsTemplate.propTypes = {
-//   pageType: PropTypes.string.isRequired,
-//   title: PropTypes.string,
-//   created: PropTypes.string,
-//   content: PropTypes.string,
-//   articleUrl: PropTypes.string,
-//   twitterName: PropTypes.string,
-// };
-
-// DetailsTemplate.defaultProps = {
-//   title: '',
-//   created: '',
-//   content: '',
-//   articleUrl: '',
-//   twitterName: '',
-// };
 
 export default DetailsTemplate;

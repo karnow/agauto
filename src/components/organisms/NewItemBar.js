@@ -10,16 +10,16 @@ import Button from 'components/atoms/Button/Button';
 import Heading from 'components/atoms/Heading/Heading';
 
 const StyledWrapper = styled.div`
-  border-left: 5px solid ${({ theme, activeColor }) => theme[activeColor]};
+  border-left: 5px solid #ffe900;
   z-index: 9;
   position: fixed;
   display: flex;
-  padding: 100px 90px;
+  padding: 100px 40px;
   flex-direction: column;
   right: 0;
   top: 0;
   height: 100vh;
-  width: 680px;
+  width: 370px;
   background-color: white;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   transform: translateX(${({ isVisible }) => (isVisible ? '0' : '100%')});
@@ -83,7 +83,7 @@ const NewItemBar = ({ pageType, isVisible, handleNewItemBarToggle }) => {
 
   return (
     <StyledWrapper isVisible={isVisible} activeColor={pageType}>
-      <Heading>Kontaktinformation</Heading>
+      <Heading style={{ fontSize: '34px' }}>Kontaktinformation</Heading>
       <Formik
         initialValues={{ navn: '', emailtelefon: '', message: '' }}
         onSubmit={handleSubmit}
@@ -105,7 +105,7 @@ const NewItemBar = ({ pageType, isVisible, handleNewItemBarToggle }) => {
             <StyledInput
               type='text'
               name='emailtelefon'
-              placeholder='email/telefon'
+              placeholder='email'
               onChange={handleChange}
               onBlur={handleBlur}
               value={values.emailtelefon}

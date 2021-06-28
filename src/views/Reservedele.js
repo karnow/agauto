@@ -27,6 +27,7 @@ const StyledWrapper2 = styled.div`
 `;
 const StyledH2 = styled.h3`
   color: white;
+  text-align: center;
 `;
 const Reservedele = () => {
   return (
@@ -35,8 +36,6 @@ const Reservedele = () => {
         <div
           style={{
             paddingTop: '50px',
-            // marginLeft: 'auto',
-            // marginRight: 'auto',
             paddingLeft: '20%',
             paddingRight: '20%',
           }}
@@ -49,7 +48,7 @@ const Reservedele = () => {
           <StyledH2>Eksempler på reservedele</StyledH2>
           <Resgalery />
           <StyledH2>Biler til skort</StyledH2>
-          <Paragraph style={{ marginBottom: '0px' }}>
+          <Paragraph style={{ marginBottom: '0px', paddingBottom: '10px' }}>
             Vi har på nuværende tidspunkt følgende biler til skrot. Ønskes en reservedel fra en af
             bilerne kontakt os
           </Paragraph>

@@ -39,16 +39,18 @@ const StyledPageHeader = styled.div`
 // `;
 
 const StyledButtonIcon = styled(ButtonIcon)`
-  width: 150;
+  width: 80px;
+  height: 40px;
   position: fixed;
   bottom: 40px;
-  right: 40px;
+  right: 30px;
   background-color: #ffe900;
   border-radius: 30px;
   background-size: 35%;
   border: solid 1px #251e20;
   z-index: 11;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: bold;
 `;
 
 const GridTemplate = ({ children, pageType }) => {

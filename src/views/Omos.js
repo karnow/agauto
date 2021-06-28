@@ -77,6 +77,30 @@ const StyledSpan = styled.div`
   margin-left: 0px;
   padding: 30px 0 30px;
 `;
+const StylesParagraphKontakt = styled(StylesParagraph)`
+  @media (max-width: 576px) {
+    font-size: 12px;
+  }
+`;
+const Iframediv = styled.div`
+  padding: 1% 1%;
+  height: 400px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 576px) {
+    height: 250px;
+    width: 250px;
+  }
+`;
+const BossDiv = styled.div`
+  background-image: url(${boss});
+  background-repeat: no-repeat;
+  height: 300px;
+  @media (max-width: 576px) {
+    height: 100px;
+  }
+`;
 const Omos = () => {
   return (
     <GridTemplate>
@@ -124,13 +148,7 @@ const Omos = () => {
           <StyledHr />
           <StyleAjerDiv>
             <EjerDiv>
-              <div
-                style={{
-                  backgroundImage: `url(${boss})`,
-                  backgroundRepeat: 'no-repeat',
-                  height: '300px',
-                }}
-              ></div>
+              <BossDiv />
               <p style={{ fontSize: '14px', textAlign: 'center', color: '#ffe900' }}>EJER</p>
 
               <p style={{ fontSize: '20px', textAlign: 'center', color: '#ffe900' }}>
@@ -138,13 +156,7 @@ const Omos = () => {
               </p>
             </EjerDiv>
             <StedForDiv>
-              <div
-                style={{
-                  backgroundImage: `url(${boss})`,
-                  backgroundRepeat: 'no-repeat',
-                  height: '300px',
-                }}
-              ></div>
+              <BossDiv />
               <p style={{ fontSize: '14px', textAlign: 'center', color: '#ffe900' }}>
                 STEDFORTRÆDER
               </p>
@@ -154,11 +166,11 @@ const Omos = () => {
             </StedForDiv>
           </StyleAjerDiv>
         </StyledSection2>
-        <StyledKontaktSection>
-          <StylesParagraph style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <StyledKontaktSection style={{ color: '#ffe900' }}>
+          <StylesParagraph style={{ textAlign: 'center', marginBottom: '20px', fontSize: '2rem' }}>
             KONTAKT
           </StylesParagraph>
-          <StylesParagraph>
+          <StylesParagraph style={{ textAlign: 'justify' }}>
             Har du spørgsmål eller andet, så er du meget velkommen til at kontakte os Vi vil
             kontakte dig hurtigst muligt Drejer det sig om bil til salg/skrot , venligst send alt
             info om bilen Drejer det sig om transport af gods eller bil kontakt venligst Arne Hansen
@@ -167,41 +179,42 @@ const Omos = () => {
           <div style={{ margin: '25px 0px', textAlign: 'center' }}>
             <StylesParagraph>Adresse: Prøvestensbroen 5 2300 København S </StylesParagraph>
             <StyledSpan>
-              <StylesParagraph>
+              <StylesParagraphKontakt>
                 <StyledImage secondary src={telefon} />
                 +45 40623660
-              </StylesParagraph>
-              <StylesParagraph>
+              </StylesParagraphKontakt>
+              <StylesParagraphKontakt>
                 <StyledImage secondary src={mobil} />
                 +45 21930777
-              </StylesParagraph>
-              <StylesParagraph>
+              </StylesParagraphKontakt>
+              <StylesParagraphKontakt>
                 <StyledImage secondary src={fax} />
                 +45 36308485
-              </StylesParagraph>
-              <StylesParagraph>
-                <StyledImage secondary src={email} />
+              </StylesParagraphKontakt>
+              <StylesParagraphKontakt>
+                <StyledImage secondary src={email} style={{ marginRight: '0px' }} />
                 info@ag-auto.dk
-              </StylesParagraph>
+              </StylesParagraphKontakt>
             </StyledSpan>
             <StylesParagraph>Åbningstider:</StylesParagraph>
+            <StylesParagraph> </StylesParagraph>
             <StylesParagraph>Mandag til fredag: 10:00 til 19:00</StylesParagraph>
             <StylesParagraph> Lørdag: 12:00 til 16:00</StylesParagraph>
             <StylesParagraph> Søndag: Lukket </StylesParagraph>
           </div>
-          <div style={{ paddingLeft: '10%', paddingRight: '10%', height: '500px' }}>
+          <Iframediv>
             <iframe
               className='mapa'
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.0489287983246!2d12.625644916043925!3d55.67074930578469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653acceca17fa7d%3A0x2ff9581c083a5de1!2sPr%C3%B8vestensbroen%205%2C%202300%20K%C3%B8benhavn!5e0!3m2!1spl!2sdk!4v1624352536728!5m2!1spl!2sdk'
-              width='80%'
-              height='100%'
+              width='90%'
+              height='90%'
               frameBorder='1'
               style={{ border: 0 }}
               allowFullScreen=''
               aria-hidden='false'
               tabIndex='0'
             />
-          </div>
+          </Iframediv>
         </StyledKontaktSection>
       </StyledWrapper2>
     </GridTemplate>

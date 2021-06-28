@@ -17,7 +17,7 @@ const StyledWrapper = styled.div`
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 10%;
-  margin-top: 120px;
+  margin-top: 110px;
 
   z-index: 1;
 `;
@@ -101,12 +101,20 @@ const StyledGodButton = styled(Button)`
   }
   border-radius: 2px;
 `;
+const DescriptionDiv = styled.div`
+  width: 40%;
+  padding-right: 10px;
+  text-align: justify;
+  @media (max-width: 741px) {
+    width: 80%;
+  }
+`;
 function Milo() {
   return (
     <div>
       <h2 style={{ textAlign: 'center', color: 'white' }}>MILJØVENLIG AUTO-OPHUG</h2>
       <SytledMiloDiv>
-        <div style={{ width: '50%', paddingRight: '10px', textAlign: 'justify' }}>
+        <DescriptionDiv>
           <Paragraph>
             AG-AUTO ApS ejes af Alex Ghazali, som har mange års erfaring indenfor branchen. Vi
             arbejder efter at sikre høj kvalitet uanset om du ønsker at skrotte/købe/sælge en bil
@@ -128,7 +136,7 @@ function Milo() {
           <SytledIntertekLogo>
             <img src={IntertekLogo} width='292px' height='104px'></img>
           </SytledIntertekLogo>
-        </div>
+        </DescriptionDiv>
         <div style={{ padding: '5px', border: '2px solid yellow', borderRadius: '5px' }}>
           <StyledH2 style={{ color: '#ffe900' }}>VI ...</StyledH2>
           <ul style={{}}>

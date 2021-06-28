@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import auto from 'assets/img/Auto.jpg';
 import Button from 'components/atoms/Button/Button';
 import Kontakt from 'components/molecules/Kontakt';
+import menu from '../../assets/img/menu1.svg';
 import { useNavigate } from 'react-router';
 
 const StyledWrapper = styled.nav`
@@ -12,7 +13,7 @@ const StyledWrapper = styled.nav`
   top: 0;
   padding: 0 0;
   width: 100vw;
-  height: 120px;
+  height: 110px;
   background-color: #ffe900;
   z-index: 10;
 `;
@@ -24,20 +25,29 @@ const StyledLogoButton = styled(Button)`
   :active {
     background-color: white;
   }
+  @media (max-width: 1211px) {
+    width: 80px;
+    font-size: 11px;
+  }
 `;
 
 const StyledDivLogo = styled.div`
   background-image: url(${auto});
+  background-color: #ffe900;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 360px 120px;
+  background-size: 350px 110px;
   background-clip: border-box;
-
   padding: 10px 10px;
-  width: 350px;
-  height: 120px;
+  width: 340px;
+  height: 110px;
   margin-right: 0px;
   margin-left: 0px;
+  @media (max-width: 1211px) {
+    background-size: 205px 80px;
+    width: 200px;
+    height: 80px;
+  }
 `;
 
 const StyledDiv = styled.div`
@@ -52,7 +62,7 @@ const UlStyled = styled.ul`
   border-left: solid 2px;
   border-right: solid 2px;
   border-bottom: solid 2px;
-  margin-left: 100px;
+  margin-left: 40px;
   margin-bottom: 10px;
   border-radius: 20px;
   display: flex;
@@ -61,18 +71,51 @@ const UlStyled = styled.ul`
   align-items: center;
   list-style-type: none;
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.7);
+
+  @media (max-width: 1211px) {
+    margin-left: 5px;
+    border: none;
+    box-shadow: none;
+    margin-top: 5px;
+    padding: 20px 10px;
+  }
+  @media (max-width: 741px) {
+    flex-direction: column;
+    margin-top: 100px;
+    background-color: #ffe900;
+    display: ${({ vis }) => (vis ? '' : 'none')};
+  }
 `;
 const LiStyled = styled.li`
   margin-right: 5px;
 `;
+const SwitcherButton = styled.button`
+  background-image: url(${menu});
+  background-color: #ffe900;
+  width: 30px;
+  height: 30px;
+  border: none;
+  margin-left: 20px;
+  :active {
+    background-color: white;
+  }
+  @media (min-width: 741px) {
+    display: none;
+  }
+`;
 
 const Sidebar = ({ pageType }) => {
+  const [state, setState] = useState(false);
+  const handleMenuToggle = () => {
+    setState(!state);
+  };
   const navigate = useNavigate();
+  console.log(state);
   return (
     <StyledWrapper activeColor={pageType}>
       <StyledDivLogo></StyledDivLogo>
       <StyledDiv>
-        <UlStyled>
+        <UlStyled vis={state}>
           <LiStyled>
             <StyledLogoButton onClick={() => navigate('/')}> HOME </StyledLogoButton>
           </LiStyled>
@@ -100,7 +143,7 @@ const Sidebar = ({ pageType }) => {
             <Button onClick={() => navigate('/omos')}>OM OS</Button>
           </LiStyled>
         </UlStyled>
-
+        <SwitcherButton onClick={() => handleMenuToggle()}></SwitcherButton>
         <Kontakt />
       </StyledDiv>
     </StyledWrapper>

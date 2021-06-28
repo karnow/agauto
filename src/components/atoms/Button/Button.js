@@ -24,5 +24,9 @@ const Button = styled.button`
   :active {
     background-color: white;
   }
+  @media (max-width: 1211px) {
+    width: 80px;
+    font-size: 11px;
+  }
 `;
 export default Button;

@@ -13,7 +13,7 @@ const StyledWrapper = styled.div`
   background-size: cover;
   /* height: 1200px; */
   padding-top: 0px;
-  margin-top: 120px;
+  margin-top: 110px;
 
   z-index: 1;
 `;

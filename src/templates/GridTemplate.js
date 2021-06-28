@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 import UserPageTemplate from 'templates/UserPageTemplate';
@@ -74,14 +73,5 @@ const GridTemplate = ({ children, pageType }) => {
     </UserPageTemplate>
   );
 };
-
-// GridTemplate.propTypes = {
-//   children: PropTypes.arrayOf(PropTypes.object).isRequired,
-//   pageType: PropTypes.oneOf(['notes', 'twitters', 'articles']),
-// };
-
-// GridTemplate.defaultProps = {
-//   pageType: 'notes',
-// };
 
 export default GridTemplate;

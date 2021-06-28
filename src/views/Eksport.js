@@ -14,7 +14,7 @@ const StyledWrapper = styled.div`
   padding-right: 10%;
   padding-bottom: 10%;
   padding-top: 50px;
-  margin-top: 120px;
+  margin-top: 110px;
   z-index: 1;
 `;
 const StyledWrapper2 = styled.div`

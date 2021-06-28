@@ -25,8 +25,12 @@ const StyledImage = styled.img`
 export { StyledImage };
 
 const StyledSpan = styled.span`
-  margin-left: 80px;
-  padding: 30px 0 30px;
+  margin-left: 40px;
+  padding: 18px 0 18px;
+
+  @media (max-width: 1395px) {
+    display: none;
+  }
 `;
 function Kontakt() {
   return (

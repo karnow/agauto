@@ -13,17 +13,10 @@ const StyledWrapper = styled.div`
   padding-right: 10%;
   padding-bottom: 10%;
   padding-top: 50px;
-  margin-top: 120px;
+  margin-top: 110px;
   z-index: 1;
 `;
-const StyledWrapper2 = styled.div`
-  position: relative;
-  background-color: grey;
-  background-size: cover;
-  height: 900px;
-  padding-top: 20px;
-  z-index: 1;
-`;
+
 const StyledH2 = styled.h3`
   position: relative;
   text-align: center;
@@ -98,7 +91,6 @@ const Bilkob = () => {
           </StyledTable>
         </div>
       </StyledWrapper>
-      {/* <StyledWrapper2></StyledWrapper2> */}
     </GridTemplate>
   );
 };

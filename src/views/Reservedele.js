@@ -45,14 +45,12 @@ const Reservedele = () => {
             bilerne kontakt os
           </Paragraph>
         </div>
+        <a href='https://pl.freepik.com/zdjecia/samochod'>
+          <p style={{ fontColor: 'black', fontSize: '3px' }}> walppaper from</p>{' '}
+        </a>
+        ;
       </StyledWrapper>
     </GridTemplate>
   );
 };
 export default Reservedele;
-
-{
-  /* <a href='https://pl.freepik.com/zdjecia/samochod'>
-  Samochód zdjęcie utworzone przez peoplecreations - pl.freepik.com
-</a>; */
-}

@@ -49,7 +49,7 @@ const StyledTd = styled.td`
   padding-left: 5px;
   width: 20%;
 `;
-
+const StyledTr = styled.tr``;
 const Bilsalg = () => {
   return (
     <GridTemplate pageType='note'>
@@ -63,25 +63,29 @@ const Bilsalg = () => {
           <StyledImg src={LogoAg}></StyledImg>
 
           <StyledTable>
-            <tr>
-              <StyledTd>Mærke</StyledTd>
-              <StyledTd></StyledTd>
-            </tr>
-            <tr>
-              <StyledTd>Model</StyledTd> <StyledTd></StyledTd>
-            </tr>
-            <tr>
-              <StyledTd>Motor</StyledTd> <StyledTd></StyledTd>
-            </tr>
-            <tr>
-              <StyledTd>Årgang</StyledTd> <StyledTd></StyledTd>
-            </tr>
-            <tr>
-              <StyledTd>Km</StyledTd> <StyledTd></StyledTd>
-            </tr>
-            <tr>
-              <StyledTd>Pris</StyledTd> <StyledTd></StyledTd>
-            </tr>
+            <thead>
+              <StyledTr>
+                <StyledTd>Mærke</StyledTd>
+                <StyledTd></StyledTd>
+              </StyledTr>
+            </thead>
+            <tbody>
+              <StyledTr>
+                <StyledTd>Model</StyledTd> <StyledTd></StyledTd>
+              </StyledTr>
+              <StyledTr>
+                <StyledTd>Motor</StyledTd> <StyledTd></StyledTd>
+              </StyledTr>
+              <StyledTr>
+                <StyledTd>Årgang</StyledTd> <StyledTd></StyledTd>
+              </StyledTr>
+              <StyledTr>
+                <StyledTd>Km</StyledTd> <StyledTd></StyledTd>
+              </StyledTr>
+              <StyledTr>
+                <StyledTd>Pris</StyledTd> <StyledTd></StyledTd>
+              </StyledTr>
+            </tbody>
           </StyledTable>
         </div>
       </StyledWrapper>

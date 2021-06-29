@@ -62,32 +62,36 @@ const Bilkob = () => {
 
         <div style={{ textAlign: 'center' }}>
           <StyledTable>
-            <tr>
-              <StyledTd style={{ border: 'solid' }}>Mærke</StyledTd>
-              <StyledTd style={{ border: 'solid' }}>Model</StyledTd>
-            </tr>
-            <tr>
-              <StyledTd>Hyandai</StyledTd> <StyledTd>H1, H100</StyledTd>
-            </tr>
-            <tr>
-              <StyledTd>Mazda</StyledTd> <StyledTd>B2000, E2000, E2200</StyledTd>
-            </tr>
-            <tr>
-              <StyledTd>Mitsubishi</StyledTd> <StyledTd>L200, L300B, Canter</StyledTd>
-            </tr>
-            <tr>
-              <StyledTd>Nissan</StyledTd> <StyledTd>King Van B, Pick Up</StyledTd>
-            </tr>
-            <tr>
-              <StyledTd>Opel</StyledTd> <StyledTd>Campo, Toro</StyledTd>
-            </tr>
-            <tr>
-              <StyledTd>Peugeot</StyledTd> <StyledTd>504, 505, J5</StyledTd>
-            </tr>
-            <tr>
-              <StyledTd>Toyota</StyledTd>
-              <StyledTd>Hilux 4x4, Hiace, Liteace dyna, Landcruiser, Corolla D</StyledTd>
-            </tr>
+            <thead>
+              <tr>
+                <StyledTd style={{ border: 'solid' }}>Mærke</StyledTd>
+                <StyledTd style={{ border: 'solid' }}>Model</StyledTd>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <StyledTd>Hyandai</StyledTd> <StyledTd>H1, H100</StyledTd>
+              </tr>
+              <tr>
+                <StyledTd>Mazda</StyledTd> <StyledTd>B2000, E2000, E2200</StyledTd>
+              </tr>
+              <tr>
+                <StyledTd>Mitsubishi</StyledTd> <StyledTd>L200, L300B, Canter</StyledTd>
+              </tr>
+              <tr>
+                <StyledTd>Nissan</StyledTd> <StyledTd>King Van B, Pick Up</StyledTd>
+              </tr>
+              <tr>
+                <StyledTd>Opel</StyledTd> <StyledTd>Campo, Toro</StyledTd>
+              </tr>
+              <tr>
+                <StyledTd>Peugeot</StyledTd> <StyledTd>504, 505, J5</StyledTd>
+              </tr>
+              <tr>
+                <StyledTd>Toyota</StyledTd>
+                <StyledTd>Hilux 4x4, Hiace, Liteace dyna, Landcruiser, Corolla D</StyledTd>
+              </tr>
+            </tbody>
           </StyledTable>
         </div>
       </StyledWrapper>

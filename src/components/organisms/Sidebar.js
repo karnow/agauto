@@ -113,14 +113,6 @@ const Sidebar = ({ pageType }) => {
   };
   const navigate = useNavigate();
 
-  // const hiddenSwitcherButton =(state)=> {
-  // if (state === true) {
-  //   return true
-  //   }
-  //   if (state === false) {
-  //     return false
-  //   }
-  // }
   return (
     <StyledWrapper activeColor={pageType}>
       <StyledDivLogo></StyledDivLogo>

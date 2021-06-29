@@ -40,7 +40,7 @@ const Reservedele = () => {
           <StyledH2>Eksempler på reservedele</StyledH2>
           <Resgalery />
           <StyledH2>Biler til skort</StyledH2>
-          <Paragraph style={{ marginBottom: '0px', paddingBottom: '10px' }}>
+          <Paragraph style={{ marginBottom: '0px', paddingBottom: '30px' }}>
             Vi har på nuværende tidspunkt følgende biler til skrot. Ønskes en reservedel fra en af
             bilerne kontakt os
           </Paragraph>

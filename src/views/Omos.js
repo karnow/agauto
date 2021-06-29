@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import GridTemplate from 'templates/GridTemplate';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import boss from 'assets/img/boss.svg';
-import Slider from 'components/molecules/Slider';
+import MyGalleryOm from 'components/molecules/MyGalleryOm';
 import { StyledImage } from 'components/molecules/Kontakt';
 import telefon from '../assets/icons/phone.svg';
 import mobil from '../assets/icons/mobil.svg';
@@ -114,7 +114,7 @@ const Omos = () => {
             I AG-AUTO ApS er vi altid åbne for nye udfordrende opgaver. Hold dig derfor ikke
             tilbage! Kontakt os og vi undersøger hvad vi kan gøre for dig.
           </Paragraph2>
-          <Slider />
+          <MyGalleryOm />
         </StyledSection>
         <StyledSection2>
           <StyledH2>PROFIL OG VÆRDIGRUNDLAG</StyledH2>
@@ -175,9 +175,9 @@ const Omos = () => {
             info om bilen Drejer det sig om transport af gods eller bil kontakt venligst Arne Hansen
             på <a href='mailto:arne@ahshipping.dk'>mail</a>
           </StylesParagraph>
-          <div style={{ margin: '25px 0px', textAlign: 'center' }}>
+          <div style={{ margin: '40px 0px', textAlign: 'center' }}>
             <StylesParagraph>Adresse: Prøvestensbroen 5 2300 København S </StylesParagraph>
-            <StyledSpan>
+            <StyledSpan style={{ marginTop: '40px', marginBottom: '40px' }}>
               <StylesParagraphKontakt>
                 <StyledImage secondary src={telefon} />
                 +45 40623660
@@ -195,8 +195,10 @@ const Omos = () => {
                 info@ag-auto.dk
               </StylesParagraphKontakt>
             </StyledSpan>
-            <StylesParagraph>Åbningstider:</StylesParagraph>
-            <StylesParagraph> </StylesParagraph>
+            <StylesParagraph style={{ marginTop: '40px', marginBottom: '20px' }}>
+              Åbningstider:
+            </StylesParagraph>
+
             <StylesParagraph>Mandag til fredag: 10:00 til 19:00</StylesParagraph>
             <StylesParagraph> Lørdag: 12:00 til 16:00</StylesParagraph>
             <StylesParagraph> Søndag: Lukket </StylesParagraph>

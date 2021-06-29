@@ -81,8 +81,9 @@ const UlStyled = styled.ul`
   }
   @media (max-width: 741px) {
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 350px;
     background-color: #ffe900;
+    border-radius: 3px;
     display: ${({ vis }) => (vis ? '' : 'none')};
   }
 `;
@@ -120,27 +121,58 @@ const Sidebar = ({ pageType }) => {
             <StyledLogoButton onClick={() => navigate('/')}> HOME </StyledLogoButton>
           </LiStyled>
           <LiStyled>
-            <Button onClick={() => navigate('/reservedele')} activeColor={pageType}>
+            <Button
+              onClick={() => {
+                navigate('/reservedele');
+                handleMenuToggle();
+              }}
+              activeColor={pageType}
+            >
               RESERVEDELE
             </Button>
           </LiStyled>
           <LiStyled>
-            <Button onClick={() => navigate('/bilsalg')} activeColor={pageType}>
+            <Button
+              onClick={() => {
+                navigate('/bilsalg');
+                handleMenuToggle();
+              }}
+              activeColor={pageType}
+            >
               BILSALG
             </Button>
           </LiStyled>
           <LiStyled>
-            <Button onClick={() => navigate('/bilkob')} activeColor={pageType}>
+            <Button
+              onClick={() => {
+                navigate('/bilkob');
+                handleMenuToggle();
+              }}
+              activeColor={pageType}
+            >
               BILKØB
             </Button>
           </LiStyled>
           <LiStyled>
-            <Button onClick={() => navigate('/eksport')} activeColor={pageType}>
+            <Button
+              onClick={() => {
+                navigate('/eksport');
+                handleMenuToggle();
+              }}
+              activeColor={pageType}
+            >
               EKSPORT
             </Button>
           </LiStyled>
           <LiStyled>
-            <Button onClick={() => navigate('/omos')}>OM OS</Button>
+            <Button
+              onClick={() => {
+                navigate('/omos');
+                handleMenuToggle();
+              }}
+            >
+              OM OS
+            </Button>
           </LiStyled>
         </UlStyled>
         <SwitcherButton onClick={() => handleMenuToggle()}></SwitcherButton>

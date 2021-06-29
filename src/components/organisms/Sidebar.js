@@ -102,6 +102,7 @@ const SwitcherButton = styled.button`
   }
   @media (min-width: 741px) {
     display: none;
+    display: ${({ hidden }) => (hidden ? 'none' : '')};
   }
 `;
 
@@ -112,13 +113,29 @@ const Sidebar = ({ pageType }) => {
   };
   const navigate = useNavigate();
 
+  // const hiddenSwitcherButton =(state)=> {
+  // if (state === true) {
+  //   return true
+  //   }
+  //   if (state === false) {
+  //     return false
+  //   }
+  // }
   return (
     <StyledWrapper activeColor={pageType}>
       <StyledDivLogo></StyledDivLogo>
       <StyledDiv>
         <UlStyled vis={state}>
           <LiStyled>
-            <StyledLogoButton onClick={() => navigate('/')}> HOME </StyledLogoButton>
+            <StyledLogoButton
+              onClick={() => {
+                navigate('/');
+                handleMenuToggle();
+              }}
+            >
+              {' '}
+              HOME{' '}
+            </StyledLogoButton>
           </LiStyled>
           <LiStyled>
             <Button
@@ -175,7 +192,7 @@ const Sidebar = ({ pageType }) => {
             </Button>
           </LiStyled>
         </UlStyled>
-        <SwitcherButton onClick={() => handleMenuToggle()}></SwitcherButton>
+        <SwitcherButton hidden={state} onClick={() => handleMenuToggle()}></SwitcherButton>
         <Kontakt />
       </StyledDiv>
     </StyledWrapper>

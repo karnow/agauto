@@ -100,6 +100,16 @@ const DescriptionDiv = styled.div`
     width: 80%;
   }
 `;
+const StyledImg = styled.img`
+  width: 292px;
+  height: 104px;
+
+  @media (max-width: 741px) {
+    width: 220px;
+    height: 80px;
+  }
+`;
+
 function Milo() {
   return (
     <div>
@@ -125,7 +135,7 @@ function Milo() {
           </div>
 
           <SytledIntertekLogo>
-            <img src={IntertekLogo} width='292px' height='104px'></img>
+            <StyledImg src={IntertekLogo}></StyledImg>
           </SytledIntertekLogo>
         </DescriptionDiv>
         <div style={{ padding: '5px', border: '2px solid yellow', borderRadius: '5px' }}>

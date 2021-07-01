@@ -103,7 +103,7 @@ const BossDiv = styled.div`
 `;
 const StyledDivImage = styled.div`
   width: 100%;
-  height: 80%;
+  height: 100%;
   text-align: center;
   @media (min-width: 741px) {
     display: none;
@@ -129,7 +129,7 @@ const Omos = () => {
               alt=''
               src={img1}
               style={{
-                width: '80%',
+                width: '100%',
                 height: '100%',
               }}
             ></img>

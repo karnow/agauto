@@ -8,7 +8,7 @@ import Bilsalg from 'views/Bilsalg';
 import Bilkob from 'views/Bilkob';
 import Eksport from 'views/Eksport';
 
-function Root() {
+function App() {
   return (
     <>
       <Router>
@@ -27,4 +27,4 @@ function Root() {
   );
 }
 
-export default Root;
+export default App;

@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import ImageGallery from 'react-image-gallery';
 import img2 from '../../assets/img/gods/2.jpg';
 import img3 from '../../assets/img/gods/3.jpg';
@@ -63,11 +64,20 @@ const images = [
     originalWidth: 400,
   },
 ];
+const ContenerDiv = styled.div`
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
 
+  @media (max-width: 741px) {
+    display: none;
+  }
+`;
 class MyGalleryGod extends React.Component {
   render() {
     return (
-      <div style={{ width: '50%', height: '50%' }}>
+      <ContenerDiv>
         <ImageGallery
           items={images}
           autoPlay={true}
@@ -76,7 +86,7 @@ class MyGalleryGod extends React.Component {
           showPlayButton={false}
           useBrowserFullscreen={true}
         />
-      </div>
+      </ContenerDiv>
     );
   }
 }

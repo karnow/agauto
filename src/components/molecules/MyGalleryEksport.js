@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
+import styled from 'styled-components';
 import img2 from '../../assets/img/transport/1a.jpg';
 import img3 from '../../assets/img/transport/2a.jpg';
 import img4 from '../../assets/img/transport/3a.jpg';
@@ -57,11 +58,20 @@ const images = [
     originalWidth: 400,
   },
 ];
+const ContenerDiv = styled.div`
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
 
+  @media (max-width: 741px) {
+    display: none;
+  }
+`;
 class MyGalleryEksport extends React.Component {
   render() {
     return (
-      <div style={{ width: '50%', height: '50%' }}>
+      <ContenerDiv>
         <ImageGallery
           items={images}
           autoPlay={true}
@@ -70,7 +80,7 @@ class MyGalleryEksport extends React.Component {
           showPlayButton={false}
           useBrowserFullscreen={true}
         />
-      </div>
+      </ContenerDiv>
     );
   }
 }

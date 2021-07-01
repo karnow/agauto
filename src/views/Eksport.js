@@ -5,6 +5,8 @@ import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import MyGalleryGod from 'components/molecules/MyGalleryGod';
 import MyGalleryEksport from 'components/molecules/MyGalleryEksport';
 import way from '../assets/img/pik3.jpg';
+import img2 from '../assets/img/gods/2.jpg';
+import img3 from '../assets/img/transport/2a.jpg';
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -52,7 +54,14 @@ const SytledContenerDiv = styled.div`
 const StyledA = styled.a`
   color: yellowgreen;
 `;
-
+const StyledDivImage = styled.div`
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  @media (min-width: 741px) {
+    display: none;
+  }
+`;
 const Eksport = () => {
   return (
     <GridTemplate pageType='note'>
@@ -65,6 +74,15 @@ const Eksport = () => {
       </StyledWrapper>
       <StyledWrapper2>
         <SytledContenerDiv>
+          <StyledDivImage>
+            <img
+              src={img2}
+              style={{
+                width: '80%',
+                height: '100%',
+              }}
+            ></img>
+          </StyledDivImage>
           <MyGalleryGod />
           <div
             style={{
@@ -108,6 +126,15 @@ const Eksport = () => {
             <Paragraph>Vi afhenter biler fra hele sjælland.</Paragraph>
           </div>
           <MyGalleryEksport />
+          <StyledDivImage>
+            <img
+              src={img3}
+              style={{
+                width: '80%',
+                height: '100%',
+              }}
+            ></img>
+          </StyledDivImage>
         </SytledContenerDiv>
       </StyledWrapper3>
     </GridTemplate>

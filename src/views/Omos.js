@@ -9,6 +9,7 @@ import telefon from '../assets/icons/phone.svg';
 import mobil from '../assets/icons/mobil.svg';
 import email from '../assets/icons/email.svg';
 import fax from '../assets/icons/fax.svg';
+import img1 from '../assets/img/war.jpg';
 
 const StyledWrapper2 = styled.div`
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%),
@@ -100,6 +101,14 @@ const BossDiv = styled.div`
     height: 100px;
   }
 `;
+const StyledDivImage = styled.div`
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  @media (min-width: 741px) {
+    display: none;
+  }
+`;
 const Omos = () => {
   return (
     <GridTemplate>
@@ -115,6 +124,15 @@ const Omos = () => {
             tilbage! Kontakt os og vi undersøger hvad vi kan gøre for dig.
           </Paragraph2>
           <MyGalleryOm />
+          <StyledDivImage>
+            <img
+              src={img1}
+              style={{
+                width: '80%',
+                height: '100%',
+              }}
+            ></img>
+          </StyledDivImage>
         </StyledSection>
         <StyledSection2>
           <StyledH2>PROFIL OG VÆRDIGRUNDLAG</StyledH2>

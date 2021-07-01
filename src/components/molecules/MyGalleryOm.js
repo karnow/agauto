@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
+import styled from 'styled-components';
 import img1 from '../../assets/img/war.jpg';
 import img2 from '../../assets/img/war2.jpg';
 
@@ -15,11 +16,21 @@ const images = [
     originalWidth: 400,
   },
 ];
+const ContenerDiv = styled.div`
+  width: 80%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 741px) {
+    display: none;
+  }
+`;
 
 class MyGalleryOm extends React.Component {
   render() {
     return (
-      <div style={{ width: '80%', height: '80%', marginLeft: 'auto', marginRight: 'auto' }}>
+      <ContenerDiv>
         <ImageGallery
           items={images}
           autoPlay={true}
@@ -28,7 +39,7 @@ class MyGalleryOm extends React.Component {
           showPlayButton={false}
           useBrowserFullscreen={true}
         />
-      </div>
+      </ContenerDiv>
     );
   }
 }

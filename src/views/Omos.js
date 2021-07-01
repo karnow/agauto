@@ -126,6 +126,7 @@ const Omos = () => {
           <MyGalleryOm />
           <StyledDivImage>
             <img
+              alt=''
               src={img1}
               style={{
                 width: '80%',

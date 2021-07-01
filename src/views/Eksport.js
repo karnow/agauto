@@ -76,6 +76,7 @@ const Eksport = () => {
         <SytledContenerDiv>
           <StyledDivImage>
             <img
+              alt=''
               src={img2}
               style={{
                 width: '80%',
@@ -128,6 +129,7 @@ const Eksport = () => {
           <MyGalleryEksport />
           <StyledDivImage>
             <img
+              alt=''
               src={img3}
               style={{
                 width: '80%',

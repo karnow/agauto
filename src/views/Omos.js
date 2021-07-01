@@ -17,8 +17,8 @@ const StyledWrapper2 = styled.div`
   background-blend-mode: multiply, multiply;
   margin-top: 110px;
   padding-bottom: 30px;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   z-index: 1;
 `;
 const StyledSection = styled.div`

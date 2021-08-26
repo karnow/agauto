@@ -44,10 +44,10 @@ const NewItemBar = ({ pageType, isVisible, handleNewItemBarToggle }) => {
 
     emailjs
       .send(
-        'gmail',
-        'template_901n5jt',
+        'service_ttzd5dh',
+        'template_561eq25',
         { navn: `${navn}`, emailtelefon: `${emailtelefon}`, message: `${message}` },
-        'user_3hqjH4SM9prI82AjbjUwe'
+        'user_RCbqAfqYjTisv8MFfs60c'
       )
       .then(
         (result) => {

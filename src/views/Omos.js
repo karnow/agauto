@@ -79,7 +79,7 @@ const StyledSpan = styled.div`
 `;
 const StylesParagraphKontakt = styled(StylesParagraph)`
   @media (max-width: 576px) {
-    font-size: 12px;
+    font-size: 18px;
   }
 `;
 const Iframediv = styled.div`
@@ -96,7 +96,8 @@ const Iframediv = styled.div`
 const BossDiv = styled.div`
   background-image: url(${boss});
   background-repeat: no-repeat;
-  height: 300px;
+  background-position: center;
+  height: 250px;
   @media (max-width: 576px) {
     height: 100px;
   }
@@ -210,7 +211,7 @@ const Omos = () => {
                 +45 36308485
               </StylesParagraphKontakt>
               <StylesParagraphKontakt>
-                <StyledImage secondary src={email} style={{ marginRight: '0px' }} />
+                <StyledImage secondary src={email} style={{ marginLeft: '30px' }} />
                 info@ag-auto.dk
               </StylesParagraphKontakt>
             </StyledSpan>

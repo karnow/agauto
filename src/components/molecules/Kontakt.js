@@ -13,7 +13,7 @@ const StylesParagraph = styled.p`
 const StyledImage = styled.img`
   width: 16px;
   height: 16px;
-  margin-right: 10px;
+  margin-right: 0px;
   ${({ secondary }) =>
     secondary &&
     css`

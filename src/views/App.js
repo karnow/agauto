@@ -7,6 +7,7 @@ import Reservedele from 'views/Reservedele';
 import Bilsalg from 'views/Bilsalg';
 import Bilkob from 'views/Bilkob';
 import Eksport from 'views/Eksport';
+import ReservImg from './ReservImg';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path='/bilkob' element={<Bilkob />} />
             <Route path='/eksport' element={<Eksport />} />
             <Route path='/omos' element={<Omos />} />
+            <Route path='/reservedele/:id' element={<ReservImg />} />
           </Routes>
         </MainTemplate>
       </Router>

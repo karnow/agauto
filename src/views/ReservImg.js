@@ -67,7 +67,7 @@ const ReservImg = () => {
           }}
         ></div>
         <Link to={`/reservedele`}>
-          <StyledH2>BACK</StyledH2>;
+          <StyledH2>Forsiden</StyledH2>;
         </Link>
         <StyledImg src={res}></StyledImg>
         <a href='https://pl.freepik.com/zdjecia/samochod'>

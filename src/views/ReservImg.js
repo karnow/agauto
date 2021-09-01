@@ -37,25 +37,10 @@ const StyledImg = styled.img`
 const ReservImg = () => {
   let res = null;
   const { id } = useParams();
+  const idNumber = Number(id);
+  let imgs = [res1, res2, res3, res4, res5, res6];
+  res = imgs[idNumber - 1];
 
-  if (id === '1') {
-    res = res1;
-  }
-  if (id === '2') {
-    res = res2;
-  }
-  if (id === '3') {
-    res = res3;
-  }
-  if (id === '4') {
-    res = res4;
-  }
-  if (id === '5') {
-    res = res5;
-  }
-  if (id === '6') {
-    res = res6;
-  }
   return (
     <GridTemplate pageType='note'>
       <StyledWrapper>

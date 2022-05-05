@@ -1,4 +1,4 @@
-# My frist commercial website made in React JS technology
+# My first commercial web application made in React js for a car dealer.
 
 Below is a link to it:
 

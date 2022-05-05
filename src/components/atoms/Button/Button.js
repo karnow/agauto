@@ -8,9 +8,9 @@ const Button = styled.button`
   height: 30px;
   border: none;
   border-radius: 50px;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
 
   ${({ secondary }) =>
@@ -26,7 +26,7 @@ const Button = styled.button`
   }
   @media (max-width: 1211px) {
     width: 80px;
-    font-size: 11px;
+    font-size: 10px;
   }
 `;
 export default Button;

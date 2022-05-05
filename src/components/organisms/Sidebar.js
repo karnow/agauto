@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import auto from 'assets/img/Auto.jpg';
-import Button from 'components/atoms/Button/Button';
-import Kontakt from 'components/molecules/Kontakt';
-import menu from '../../assets/img/menu1.svg';
-import { useNavigate } from 'react-router';
+import React, {
+  useState,
+} from "react";
+import styled from "styled-components";
+import auto from "assets/img/Auto.jpg";
+import Button from "components/atoms/Button/Button";
+import Kontakt from "components/molecules/Kontakt";
+import menu from "../../assets/img/menu1.svg";
+import { useNavigate } from "react-router";
 
 const StyledWrapper = styled.nav`
   position: fixed;
@@ -27,7 +29,7 @@ const StyledLogoButton = styled(Button)`
   }
   @media (max-width: 1211px) {
     width: 80px;
-    font-size: 11px;
+    font-size: 10px;
   }
 `;
 
@@ -44,7 +46,8 @@ const StyledDivLogo = styled.div`
   margin-right: 0px;
   margin-left: 0px;
   @media (max-width: 1211px) {
-    background-size: 205px 80px;
+    background-size: 205px
+      80px;
     width: 200px;
     height: 80px;
   }
@@ -70,7 +73,8 @@ const UlStyled = styled.ul`
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
-  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 20px -10px
+    rgba(0, 0, 0, 0.7);
 
   @media (max-width: 1211px) {
     margin-left: 5px;
@@ -84,7 +88,8 @@ const UlStyled = styled.ul`
     margin-top: 350px;
     background-color: #ffe900;
     border-radius: 3px;
-    display: ${({ vis }) => (vis ? '' : 'none')};
+    display: ${({ vis }) =>
+      vis ? "" : "none"};
   }
 `;
 const LiStyled = styled.li`
@@ -102,40 +107,51 @@ const SwitcherButton = styled.button`
   }
   @media (min-width: 741px) {
     display: none;
-    display: ${({ hidden }) => (hidden ? 'none' : '')};
+    display: ${({ hidden }) =>
+      hidden ? "none" : ""};
   }
 `;
 
-const Sidebar = ({ pageType }) => {
-  const [state, setState] = useState(false);
-  const handleMenuToggle = () => {
-    setState(!state);
-  };
-  const navigate = useNavigate();
+const Sidebar = ({
+  pageType,
+}) => {
+  const [state, setState] =
+    useState(false);
+  const handleMenuToggle =
+    () => {
+      setState(!state);
+    };
+  const navigate =
+    useNavigate();
 
   return (
-    <StyledWrapper activeColor={pageType}>
+    <StyledWrapper
+      activeColor={pageType}
+    >
       <StyledDivLogo></StyledDivLogo>
       <StyledDiv>
         <UlStyled vis={state}>
           <LiStyled>
             <StyledLogoButton
               onClick={() => {
-                navigate('/');
+                navigate("/");
                 handleMenuToggle();
               }}
             >
-              {' '}
-              HOME{' '}
+              HOME
             </StyledLogoButton>
           </LiStyled>
           <LiStyled>
             <Button
               onClick={() => {
-                navigate('/reservedele');
+                navigate(
+                  "/reservedele"
+                );
                 handleMenuToggle();
               }}
-              activeColor={pageType}
+              activeColor={
+                pageType
+              }
             >
               RESERVEDELE
             </Button>
@@ -143,10 +159,14 @@ const Sidebar = ({ pageType }) => {
           <LiStyled>
             <Button
               onClick={() => {
-                navigate('/bilsalg');
+                navigate(
+                  "/bilsalg"
+                );
                 handleMenuToggle();
               }}
-              activeColor={pageType}
+              activeColor={
+                pageType
+              }
             >
               BILSALG
             </Button>
@@ -154,10 +174,14 @@ const Sidebar = ({ pageType }) => {
           <LiStyled>
             <Button
               onClick={() => {
-                navigate('/bilkob');
+                navigate(
+                  "/bilkob"
+                );
                 handleMenuToggle();
               }}
-              activeColor={pageType}
+              activeColor={
+                pageType
+              }
             >
               BILKØB
             </Button>
@@ -165,10 +189,14 @@ const Sidebar = ({ pageType }) => {
           <LiStyled>
             <Button
               onClick={() => {
-                navigate('/eksport');
+                navigate(
+                  "/eksport"
+                );
                 handleMenuToggle();
               }}
-              activeColor={pageType}
+              activeColor={
+                pageType
+              }
             >
               EKSPORT
             </Button>
@@ -176,7 +204,9 @@ const Sidebar = ({ pageType }) => {
           <LiStyled>
             <Button
               onClick={() => {
-                navigate('/omos');
+                navigate(
+                  "/omos"
+                );
                 handleMenuToggle();
               }}
             >
@@ -184,7 +214,12 @@ const Sidebar = ({ pageType }) => {
             </Button>
           </LiStyled>
         </UlStyled>
-        <SwitcherButton hidden={state} onClick={() => handleMenuToggle()}></SwitcherButton>
+        <SwitcherButton
+          hidden={state}
+          onClick={() =>
+            handleMenuToggle()
+          }
+        ></SwitcherButton>
         <Kontakt />
       </StyledDiv>
     </StyledWrapper>

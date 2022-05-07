@@ -1,4 +1,4 @@
-# My first commercial web application made in React js for a car dealer.
+# My Commercial App made for a car dealer.
 
 Below is a link to it:
 
